@@ -1,51 +1,25 @@
-# Labspy8
-## Tugas Pratikum 8
-## 1. Tugas : Buat Program Sederhana dengan Mengaplikasikan Penggunaan Class, Buatlah Class Untuk Menampilkan Daftar Nilai Mahasiswa
-Dengan ketentuannya yaitu : <p>
-1. Method tambah() untuk menambah data <p>
-2. Method tampilkan() untuk menampilkan data <p>
-3. Method hapus(nama) untuk menghapus data berdasarkan nama <p>
-4. Method ubah(nama) untuk mengubah data berdasarkan nama <p>
 
-<li> Penjelasan </li>
-
-1. Untuk memanggil fungsi dengan nama "os". <p>
-
-```bash
 import os
-```
 
-2. Membuat class data_mhsw dengan atributnya, yaitu nama, nim, tugas, uts dan uas. <p>
-
-```bash
 class data_mhsw:
     nama=""
     nim=""
     tugas=""
     uts=""
     uas=""
-```
 
-3. Membuat variable data = [] untuk menampung list dari data_mhsw. <p>
 
-```bash
 data = []
-```
 
-4. Membuat fungsi tambahan, jika diperlukan fungsi tersebut akan dipanggil oleh program. <p>
 
-```bash
 def no_data():
     print(" DAFTAR NILAI MAHASISWA ")
     print("------------------------")
     print()
     print(" - TIDAK ADA DATA - ")
     print()
-```
 
-5. Menambah data ( tambah() ), Menginput nim, nama, nilai tugas, nilai uts dan nilai uas, Data yang telah diinput akan ditambahkan ke dalam variable data. <p>
 
-```bash
 def tambah():
     os.system("cls")
     b = data_mhsw()
@@ -59,15 +33,8 @@ def tambah():
     b.akhir = (b.tugas*30/100) + (b.uts*35/100) + (b.uas*35/100) 
     data.append(b)
     print()
-```
 
-Output Menambahkan Data <p>
 
-![gambar 1](screenshot/tambah.png)
-
-6. Menampilkan data ( lihat() ), Jika belum menginput data maka akan memanggil fungsi no_data(), Jika sebelumnya sudah menginput data maka data yang sudah diinput akan ditampilkan oleh program. <p>
-
-```bash
 def lihat():
     os.system("cls")
     if len(data) <=0:
@@ -83,15 +50,9 @@ def lihat():
             print("Nilai UAS\t: "+str(a.uas))
             print("Nilai Akhir\t: "+str(a.akhir))
             print()
-```
 
-Output Menampilkan Data <p>
 
-![gambar 2](screenshot/lihat.png)
 
-7. Mengubah data ( ubah() ), Menginput nama kemudian input data yang ingin diubah. <p>
-
-```bash
 def ubah():
     os.system("cls")
     if len(data) <=0:
@@ -107,15 +68,8 @@ def ubah():
             nama.uas = (int(input("Nilai UAS\t: ")))
             akhir = (nama.tugas*30/100) + (nama.uts*35/100) + (nama.uas*35/100)
         print()
-```
+            
 
-Output Mengubah Data <p>
-
-![gambar 3](screenshot/ubah.png)
-
-8. Menghapus data ( hapus() ), Menginput nama, setelah nama diinput maka data yang lainnya akan ikut terhapus sesuai dengan nama yang diinputkan. <p>
-
-```bash
 def hapus():
     os.system("cls")
     if len(data) <=0:
@@ -128,15 +82,8 @@ def hapus():
         for nama in data:
             data.remove(nama)
         print()
-```
+        
 
-Output Menghapus Data <p>
-
-![gambar 4](screenshot/hapus.png)
-
-9. Menggunakan perulangan uncountable, yang artinya selama statement bernilai "True" maka program akan terus berjalan. Jika statementnya "False" maka program terhenti. <p>
-
-```bash
 Loop = True
 while Loop:
     print(" Pilih Menu ")
@@ -159,6 +106,3 @@ while Loop:
     elif tanya=="k" or tanya=="K":
         print("Program Selesai")
         Loop = False
-```
-
-## Sekian Terima Kasih
